@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Formulir Ubah Data</title>
+</head>
+<body>
+	<h1>Formulir Ubah Data</h1>
+
+	<form th:object="${mhs}" 
+		th:action="@{/edit}"
+		method="post">
+		<table>
+			<tr>
+				<td>ID</td>
+				<td><input type="text" 
+					th:field="*{id}"
+					readonly="true" /></td>
+			</tr>
+			<tr>
+				<td>JENIS</td>
+				<td><input type="text" 
+					th:field="*{jenis}"/></td>
+			</tr>
+			<tr>
+				<td>NAMA BARANG</td>
+				<td><input type="text" 
+					th:field="*{nama_barang}"/></td>
+			</tr>
+		</table>
+		<button type="submit">Simpan</button>
+	</form>
+</body>
+</html>
